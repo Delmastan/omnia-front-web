@@ -127,6 +127,26 @@ button:focus-visible {
   }
 }
 
+nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: blue;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 @layer base {
   * {
     @apply border-border;
