@@ -15,13 +15,16 @@ const App: React.FC = () => {
       <div className="w-screen">
         {/* Navigation */}
         <nav className="w-full h-20 shadow-md border rounded-b-lg border-white flex">
-          <div className="flex w-full justify-between px-2">
+          <div className="flex w-full justify-between pl-2">
             <LogoTitle />
 
             <ul className="flex flex-row">
-              {NavButtonList.map((button) => (
-                <NavButton title={button.title} path={button.path} />
-              ))}
+              {NavButtonList.map((button, index) => {
+                if (index === NavButtonList.length - 1) {
+                  return <NavButton title={button.title} path={button.path} last />;
+                }
+                return <NavButton title={button.title} path={button.path} />;
+              })}
             </ul>
           </div>
         </nav>
